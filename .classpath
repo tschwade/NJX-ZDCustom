@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="ZDCUST_UI/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Development/workspace-2020-04-14-custom/.naturalone/apache-tomcat/webapps/cisnatural/WEB-INF/lib/cis.jar"/>
-	<classpathentry kind="lib" path="C:/Development/workspace-2020-04-14-custom/.naturalone/apache-tomcat/webapps/cisnatural/WEB-INF/lib/sdo.jar"/>
+	<classpathentry kind="lib" path="C:/Development/workspace-2020-04-15-custom/.naturalone/apache-tomcat/webapps/cisnatural/WEB-INF/lib/cis.jar"/>
+	<classpathentry kind="lib" path="C:/Development/workspace-2020-04-15-custom/.naturalone/apache-tomcat/webapps/cisnatural/WEB-INF/lib/sdo.jar"/>
 	<classpathentry kind="var" path="ENTIREX_RUNTIME"/>
 	<classpathentry kind="lib" path="ZDCUST_UI/appclasses/lib/json-simple-3.1.1.jar"/>
 	<classpathentry kind="output" path="ZDCUST_UI/appclasses/classes"/>
