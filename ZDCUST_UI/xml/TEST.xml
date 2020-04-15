@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<natpage adapterlisteners="net.zerodrive.natural.njx.controls.custom.JSONAdapterListener" natsinglebyte="false" natkcheck="true" xmlns:njx="http://www.softwareag.com/njx/njxMapConverter" xmlns:bmobile="http://www.softwareag.com/njx/njxMobile">
+    <custom:json jsonobject="test" jsonmetadata="testmeta.json" jsonpretty="true">
+    </custom:json>
+    <bmobile:navbar menuprop="navbar" brandprop="brand" brandstraighttext="true">
+    </bmobile:navbar>
+    <pagebody>
+        <bmobile:container takefullwidth="true">
+            <bmobile:row>
+                <bmobile:col styleclasses="col-sm-6">
+                    <bmobile:formarea legend="JSON Data">
+                        <bmobile:formgroup>
+                            <bmobile:ftextarea rows="90" valueprop="test_json">
+                            </bmobile:ftextarea>
+                        </bmobile:formgroup>
+                    </bmobile:formarea>
+                </bmobile:col>
+                <bmobile:col styleclasses="col-sm-6">
+                    <bmobile:formarea legend="Natural Data">
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="String">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:ffield valueprop="test.string" datatype="xs:string">
+                                </bmobile:ffield>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Fixed string">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:ffield valueprop="test.fixed" datatype="string 32">
+                                </bmobile:ffield>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Boolean">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:checkbox valueprop="test.boolean">
+                                </bmobile:checkbox>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Float">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:ffield valueprop="test.float" datatype="xs:float">
+                                </bmobile:ffield>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Double">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:ffield valueprop="test.double" datatype="xs:double">
+                                </bmobile:ffield>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Short">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:ffield valueprop="test.short" datatype="xs:short">
+                                </bmobile:ffield>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Integer">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:ffield valueprop="test.integer" datatype="int">
+                                </bmobile:ffield>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Long">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:ffield valueprop="test.long" datatype="long">
+                                </bmobile:ffield>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Packed">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:ffield valueprop="test.packed" datatype="P7.3">
+                                </bmobile:ffield>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Unpacked">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:ffield valueprop="test.unpacked" datatype="N7.3">
+                                </bmobile:ffield>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Object">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-4">
+                                <bmobile:ffield valueprop="test.object.prop1">
+                                </bmobile:ffield>
+                            </bmobile:col>
+                            <bmobile:col styleclasses="col-sm-4">
+                                <bmobile:ffield valueprop="test.object.prop2">
+                                </bmobile:ffield>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Object array">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:simplegrid gridprop="lines1" sortcol="1" width="100%" source="prop" styleclasses="table-striped">
+                                    <bmobile:simplerow>
+                                        <bmobile:simplecol colprop="gprop3">
+                                        </bmobile:simplecol>
+                                        <bmobile:simplecol colprop="gprop4">
+                                        </bmobile:simplecol>
+                                    </bmobile:simplerow>
+                                </bmobile:simplegrid>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Object subarray (1)">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:simplegrid gridprop="lines2" sortcol="1" width="100%" source="prop" styleclasses="table-striped">
+                                    <bmobile:simplerow>
+                                        <bmobile:simplecol colprop="gprop51">
+                                        </bmobile:simplecol>
+                                        <bmobile:simplecol colprop="gprop61">
+                                        </bmobile:simplecol>
+                                    </bmobile:simplerow>
+                                </bmobile:simplegrid>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Object subarray (2)">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:simplegrid gridprop="lines3" sortcol="1" width="100%" source="prop" styleclasses="table-striped">
+                                    <bmobile:simplerow>
+                                        <bmobile:simplecol colprop="gprop52">
+                                        </bmobile:simplecol>
+                                        <bmobile:simplecol colprop="gprop62">
+                                        </bmobile:simplecol>
+                                    </bmobile:simplerow>
+                                </bmobile:simplegrid>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Array of arrays (1)">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:simplegrid gridprop="lines4" sortcol="1" width="100%" source="prop" styleclasses="table-striped">
+                                    <bmobile:simplerow>
+                                        <bmobile:simplecol colprop="gprop711">
+                                        </bmobile:simplecol>
+                                        <bmobile:simplecol colprop="gprop712">
+                                        </bmobile:simplecol>
+                                    </bmobile:simplerow>
+                                </bmobile:simplegrid>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Array of arrays (2)">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:simplegrid gridprop="lines5" sortcol="1" width="100%" source="prop" styleclasses="table-striped">
+                                    <bmobile:simplerow>
+                                        <bmobile:simplecol colprop="gprop721">
+                                        </bmobile:simplecol>
+                                        <bmobile:simplecol colprop="gprop722">
+                                        </bmobile:simplecol>
+                                    </bmobile:simplerow>
+                                </bmobile:simplegrid>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                        <bmobile:formgroup>
+                            <bmobile:flabel styleclasses="col-sm-4" name="Array of values">
+                            </bmobile:flabel>
+                            <bmobile:col styleclasses="col-sm-8">
+                                <bmobile:simplegrid gridprop="lines6" sortcol="1" width="100%" source="prop" styleclasses="table-striped">
+                                    <bmobile:simplerow>
+                                        <bmobile:simplecol colprop="gprop8">
+                                        </bmobile:simplecol>
+                                        <bmobile:simplecol colprop="gprop8">
+                                        </bmobile:simplecol>
+                                    </bmobile:simplerow>
+                                </bmobile:simplegrid>
+                            </bmobile:col>
+                        </bmobile:formgroup>
+                    </bmobile:formarea>
+                </bmobile:col>
+            </bmobile:row>
+            <bmobile:row>
+                <bmobile:col styleclasses="col-sm-12">
+                    <bmobile:alert typeprop="alerttype" shorttextprop="alertshorttext">
+                    </bmobile:alert>
+                </bmobile:col>
+            </bmobile:row>
+        </bmobile:container>
+    </pagebody>
+</natpage>

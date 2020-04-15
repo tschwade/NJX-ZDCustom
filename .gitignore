@@ -1,0 +1,14 @@
+.git/
+**/*.jar
+**/*.war
+cache_*.*
+ZDCUST/SRC/*.NS8
+ZDCUST_UI/appclasses/
+ZDCUST_UI/accesspath/
+ZDCUST_UI/wsdl/
+ZDCUST_UI/protocol/
+ZDCUST_UI/*.html
+ZDCUST_UI/*_SWT.xml
+ZDCUST_UI/ZZZZZZZ*.*
+ZDCUST_UI/xml/ZZZZZZZ*.*
+

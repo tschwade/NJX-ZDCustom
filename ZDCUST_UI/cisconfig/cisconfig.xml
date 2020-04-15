@@ -1,0 +1,154 @@
+<!-- 
+
+Configuration parameters for the CIS Runtime Environment
+============================================================
+
+browserpopuponerror = true/false
+If the application behind a CIS page throws an error then CIS has
+two ways to handle it: 
+(1 = false = default): the browser switches to an error screen; in the 
+screen the user can only abort the current function. This is the default
+way because any kind of inconsistencies are automatically ommitted.
+(2 = true): the browser opens a popup window, in which the error is output.
+This way should only be used during development because it might cause
+inconsistencies in the application.
+
+clientsideerrorinstatusbar = true/false
+Default: false. By default, client-side error messages are displayed as pop-ups.
+When you set this parameter to "true", client-side error messages are displayed in the status bar. 
+
+completedateinput = true/false
+Default: true. By default, partial input in the DATEINPUT control is automatically completed.
+When you set this parameter to "false", no automatic completion will be done, thus forcing end-users 
+to always enter the complete date.
+ 
+debugmode = true/false
+Controls if debug information is written to the file log. Should 
+be switched off for normal operations - and only switched to
+true when you want to analyse some error situation.
+
+defaultchartconfig = You can set your own default chart configuration file for your
+entire application. This will be merged with explicit chart configurations in the
+single pages.
+For example: ../myui/style/mychartconfig.js
+
+defaultcss = You can set your own default style sheet for your entire application. 
+For example:  ../cis/styles/MY_STYLE.css
+
+defaultlanguage = Default: en (English).
+Defines the language that is to be used by default when starting Application Designer. 
+
+errorreactionadapter = Java class name
+In case of an unhandled application errors the CIS runtime navigates
+to an error page. The class name specified in errorreactionadapter is
+the Java Adapter for this error page. In case no errorreactionadapter 
+is specified, a default one is used showing the error's stack trace. 
+The CIS framework contains a second errorreactionadapter with the classname
+com.softwareag.cis.server.SecureErrorReactionAdapter. For security reasons
+this does not show a stacktrace but only an error message.
+You can write your own errorreactionadapter and create your own error page.
+An errorreactionadapter must implement one of the interfaces 
+com.softwareag.cis.server.ISecureErrorReactionAdapter
+com.softwareag.cis.server.IErrorReactionAdapter
+For more information see the corresponding Java Documtenation.
+
+fieldnumerictypesrightaligned = true/false
+Default: false. Set this parameter to "true" in order to right-align text within the FIELD control
+when using the data type int, long or float. 	
+
+multilanguagemanager = file name of class which implements the IMLManager
+interface. You can specify an own class here. The MLManagerFactory
+creates an instance using a constructor without any parameter.
+
+onlinehelpmanager = file name of class which implements the IOHManager
+interface. You can specify an own class here. The OHManagerFactory
+creates an instance using a constructor without any parameter.
+
+sessiontimeout = time in seconds after which a session is cleaned
+up automatically. The default is 7200 (= 2 hours) - this default is used
+if no parameter is specified in this configuration file. 
+
+startmonitoringthread = true/false
+Starts a monitoring thread. This option should be true on for nearly
+all scenarios!
+
+requestclienthost = true/false
+If a client sends an http request then for the firest request
+it is determined from which client this request is coming. This
+operation sometimes is quite expensive - so there is the option
+to switch it off. There is no disadvantag in nromal operation if
+siwtched off, besides in the monitoring you cannot identify which
+session belongs to which client.
+
+useownclassloader = true/false
+Controls if the CIS runtime environment uses its own class loader
+for loading application classes. The default is "true" - you can switch off
+the class loader in special runtime scenarios in which you want the
+class loader management to be taken over by an instance around CIS, e.g.
+the application server - and if at same point of time this instance requires
+all application classes to run in the instance's class loader management.
+PLEASE PAY ATTENTION: the CIS class loader automatically searches for
+classes in certain directories (<project>/appclasses/classes and
+<project>/appclasses/lib) - in cases you do not used the CIS
+class loader you have to set up your environment accordingly.
+
+
+logtoscreen = true/false
+Indicates if the log is also output as System.out.println() - otherwise
+the log is only output into the corresponding log file. Should only be
+"true" for development puposes. Default is "false".
+
+zipcontent = true/false
+Defines if the http-responses carrying data from the adapter to the
+browser client are zipped or not. Default is "true".
+
+textencoding
+Encoding that is used for writing layout definitions and multi language
+files. 
+
+
+
+-->
+
+<cisconfig startmonitoringthread="true"
+            maxserverlogage="10"
+            requestclienthost="false"
+            debugmode="true"
+            sessiontimeout="3600"
+            useownclassloader="true"
+            browserpopuponerror="false"
+            framebuffersize="1"
+            usepagepopup="true"
+            minjsfilecount="true"
+            textencoding="UTF-8"
+            fixoccupiedimage="true"
+            workplacehotkeys="ctrl-34;ctrl-33"
+            errorreactionadapter="com.softwareag.cis.server.ErrorReactionAdapter"
+            xmldatamanager="com.softwareag.cis.xmldata.filebased.XMLDataManager"
+            popupdivframe="TOPWORKPLACE" >
+                 
+	<requestrecording recordrequests="false"
+	                  recorddirectory="c:/temp/traces/">
+	</requestrecording>
+	
+	<generationaddons>
+		<generationaddon classname="com.softwareag.cis.gui.generate.XSDGenerationAddon">
+        </generationaddon>
+	</generationaddons>
+	
+	<tagnotificationhandlers>
+		<tagnotificationhandler tagname="natpage" classnames="com.softwareag.natural.njx.generate.NATPAGENotificationHandler" >
+		</tagnotificationhandler>
+	</tagnotificationhandlers>
+	
+	<layoutprocessors>
+	   <layoutprocessor classname="com.softwareag.cis.gui.generate.NATPAGELayoutProcessor" >
+	   </layoutprocessor>
+	</layoutprocessors>
+	
+    <editorextensions>
+	  <editorextension name="Map Conversion Assistant" classname="com.softwareag.natural.mapconverter.gui.PluginMapConverterAdapter">
+	  </editorextension>
+    </editorextensions>
+
+</cisconfig>

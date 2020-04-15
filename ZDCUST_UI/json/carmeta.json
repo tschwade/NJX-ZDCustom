@@ -1,0 +1,12 @@
+{
+	"type": "xs:string",
+	"model": "xs:string",
+	"color": "xs:string",
+	"engine": {
+		"power": "int",
+		"displacement": "int",
+		"cylinders": {
+			"number": "xs:short"
+		}
+	}
+}

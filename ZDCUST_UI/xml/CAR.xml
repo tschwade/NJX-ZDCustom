@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<natpage adapterlisteners="net.zerodrive.natural.njx.controls.custom.JSONAdapterListener" natsinglebyte="false" natkcheck="true" xmlns:njx="http://www.softwareag.com/njx/njxMapConverter">
+    <custom:json jsonobject="car" jsonmetadata="carmeta.json" jsonpretty="true">
+    </custom:json>
+    <titlebar name="Simple JSON example">
+    </titlebar>
+    <header>
+        <button name="Exit" method="onExit">
+        </button>
+    </header>
+    <pagebody takefullheight="true">
+        <itr takefullwidth="true" height="100%">
+            <text valueprop="car_json" width="100%" height="100%">
+            </text>
+        </itr>
+    </pagebody>
+    <statusbar>
+    </statusbar>
+</natpage>

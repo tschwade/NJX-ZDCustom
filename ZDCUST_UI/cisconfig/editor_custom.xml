@@ -1,0 +1,14 @@
+<controllibrary>
+	<editor>
+		<tag name="custom:json" helptext="JSON Control">
+			<taginstance>
+			</taginstance>
+			<attribute name="jsonobject" helptext="Group name of the JSON data structure" />
+			<attribute name="jsonmetadata" helptext="File containing the JSON meta description" />
+			<attribute name="jsonpretty" datatype="boolean" helptext="Pretty print the JSON data" />
+		</tag>
+		<tagsubnodeextension control="natpage" newsubnode="custom:json" />
+		<taggroupsubnodeextension group="zerodrive" newsubnode="custom:json" />
+	</editor>
+</controllibrary>
+

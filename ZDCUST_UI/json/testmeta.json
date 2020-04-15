@@ -1,0 +1,46 @@
+{
+	"string": "xs:string",
+	"fixed": "string 32",
+	"boolean": "xs:boolean",
+	"float": "xs:float",
+	"double": "xs:double",
+	"short": "xs:short",
+	"integer": "int",
+	"long": "long",
+	"packed": "P7.3",
+	"unpacked": "N7.3",
+	"object": {
+		"prop1": "xs:string",
+		"prop2": "xs:string"
+	},
+	"objectarray": [
+		{
+			"prop3": "xs:string",
+			"prop4": "xs:string",
+			"subarray": [
+				{
+					"prop5": "xs:string",
+					"prop6": "xs:string"
+				}
+			]
+		}
+	],
+	"arrayarray": [
+		{
+			"subarrayarray": [
+				{
+					"subsubarrayarray": [
+						{
+							"prop7": "xs:string"
+						}
+					]
+				}
+			]
+		}
+	],
+	"valuearray": [
+		{
+			"data_": "xs:string"
+		}
+	]
+}
